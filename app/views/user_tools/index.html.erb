@@ -1,0 +1,15 @@
+<h1>Users</h1>
+
+<div id="Data" class="table-responsive">
+    <table class="table table-striped"> 
+        <tbody> 
+            <% @users.each do |user| %> 
+                <tr class="<%= cycle("","zebra") %>"> 
+                   <td ><a href="user-tools/<%= user.id.to_s %>"  ><%= user.name || user.email %><a></td> 
+                   <td><%= user.email %> </td> 
+                </tr> 
+             <% end %> 
+        </tbody> 
+    </table> 
+</div> 
+
